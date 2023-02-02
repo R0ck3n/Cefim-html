@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../font/OpenSans/OpenSans-Regular.ttf");
+
+  font-family: "Open Sans bold";
+  src: url("../font/OpenSans/OpenSans-Bold.ttf");
+
+  font-family: "Open Sans semi-bold";
+  src: url("../font/OpenSans/OpenSans-SemiBold.ttf");
+}
+/****** GENERAL***/
+body * {
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 16px;
+}
+/***** RESPONSIVE ****/
+@media screen and (max-width: 600px) {
+  header nav {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/**********************/
+/******* HOMEPAGE *****/
+/**********************/
+
+/******* HEADER *****/
+/******* NAVBAR *****/
+nav {
+  background-color: #dd5555;
+  height: 52px;
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+}
+
+Nav ul {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+nav ul li {
+  list-style-type: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+/******* TOP IMG *****/
+header section > div {
+  height: 658px;
+  background: url("../img/about.jpg@2x.webp") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header section > div h1 {
+  width: 100%;
+  font-family: "Open Sans Bold", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+  color: #ffffff;
+}
+header section > div h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header section > div h3::after {
+  content: "";
+  border-bottom: 1px solid #ffffff;
+  height: 1px;
+  width: 390px;
+  margin: 23px 0 24px 0;
+}
+
+.home-top-img-btns {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+.home-top-img-btns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 46px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.home-top-img-btns button:hover {
+  background-color: #fafafa;
+}
+
+.home-top-img-btns img {
+  margin-right: 13px;
+}
+/******* MAIN *****/
+
+main section:first-child h2 {
+  font-family: "Open Sans semi-bold", sans-serif;
+  font-size: 36px;
+  margin: 52px 0;
+  text-align: center;
+}
+main section > div {
+  display: flex;
+  gap: 30px;
+  margin: 0 10%;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 358px;
+}
+
+.home-card div {
+  background-color: #dd5555;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-card h4 {
+  font-family: "Open Sans semi-bold", sans-serif;
+  font-size: 28px;
+  margin: 15px 0 7px 0;
+}
