@@ -173,7 +173,6 @@ main section:nth-child(3) {
   margin: 0 10%;
 }
 main section:nth-child(3) .home-card div {
-  background-color: none;
   width: 239px;
   height: 239px;
   border-radius: 50%;
