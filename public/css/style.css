@@ -109,20 +109,22 @@ header section > div h3::after {
 .home-top-img-btns img {
   margin-right: 13px;
 }
-/******* MAIN *****/
-
+/*************** MAIN ****************/
+/******Section 1 "Cards" ************/
 main section:first-child h2 {
   font-family: "Open Sans semi-bold", sans-serif;
   font-size: 36px;
   margin: 52px 0;
   text-align: center;
 }
-main section > div {
+main section:first-child > div {
   display: flex;
   gap: 30px;
   margin: 0 10%;
 }
-
+main section:first-child > div:nth-child(3){
+  margin: 30px 10% 63px 10%;
+}
 .home-card {
   display: flex;
   flex-direction: column;
@@ -144,4 +146,58 @@ main section > div {
   font-family: "Open Sans semi-bold", sans-serif;
   font-size: 28px;
   margin: 15px 0 7px 0;
+}
+.home-card p {
+  text-align: center;
+}
+/******Section 2 img ************/
+main section:nth-child(2) {
+  background: url("../img/team.jpg@2x.webp") no-repeat;
+  background-size: cover;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+}
+main section:nth-child(2) h2 {
+  width: 100%;
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+/******Section 2 team ************/
+main section:nth-child(3) {
+  display: flex;
+  gap: 53px;
+  margin: 0 10%;
+}
+main section:nth-child(3) .home-card div {
+  background-color: none;
+  width: 239px;
+  height: 239px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section:nth-child(3) .home-card div img {
+  height: 239px;
+  width: 239px;
+}
+main section:nth-child(3) .home-card button {
+  height: 40px;
+  width: 132px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 24px;
+  background-color:#dd5555;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
 }
