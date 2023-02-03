@@ -73,6 +73,7 @@
       <section>
         <h2>Elle fait des trucs super !</h2>
         <div>
+        <div>
           <div class="home-card">
             <div>
               <img
@@ -154,6 +155,7 @@
             </p>
           </div>
         </div>
+        </div>
       </section>
       <section>
       <h2>La super équipe à l’origine de SuperApp</h2>
@@ -200,6 +202,31 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <h2>ENVOYEZ-NOUS UN MESSAGE</h2>
+      <form method="get" onsubmit="event.preventDefault(); alert('Formulaire soumis avec succès !');">
+        <div>
+          <div>
+          <div>
+            <label for="username">Nom</label>
+            <input id="username" name="username" type="text" required/>
+          </div>
+          <div>
+            <label for="usermail">Votre e-mail</label>
+            <input id="usermail" name="usermail" type="email" required/>
+          </div>
+          </div>
+        </div>
+        <div>
+          <label for="abstract">Votre message</label>
+          <textarea id="abstract" name="abstract"></textarea>
+        </div>
+        <div>
+          <button type="submit">
+            <img src="./public/img/paper-plane.svg" alt="send logo"/>Envoyer
+          </button>
+        </div>
+      </form>
+    </footer>
   </body>
 </html>
