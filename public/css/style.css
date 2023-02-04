@@ -26,17 +26,40 @@ body * {
   }
   body main section:nth-child(3){
     flex-direction: row;
+    flex-wrap: wrap;
     gap:0;
   }
   main section:nth-child(3) .home-card{
     min-width: 50%;
   }
+  body main section:nth-child(3) .home-card button{
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width: 600px) {
+  body main section:first-child{
+    display: block;
+    justify-content: space-around;
+  }
+
+  body nav ul:first-child li:not(:first-child){
+    display: none;
+  }
+
+  header .container{
+    display: flex;
+    float: right;
+  }
+
+  .home-top-img-btns{
+    flex-direction: column;
+    align-items: center;
+  }
   header nav {
     padding: 0;
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
   }
   body main section .home-card  {
     margin: auto;
@@ -52,6 +75,15 @@ body * {
     min-width: 100%;
     margin-bottom: 63px;
   }
+  footer form > div div {
+    flex-direction: column;
+  }
+  footer form > div div div:first-child,
+  footer form > div div div:nth-child(2) {
+    margin: 0 0 19px 0!important;
+    width: 100%;
+  }
+
 }
 
 /**********************/
@@ -59,13 +91,124 @@ body * {
 /**********************/
 
 /******* HEADER *****/
+.container {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #dd5555;
+  border-radius: 5px;
+  background-color: #dd5555;
+}
+
+.container h1 {
+  margin-bottom: 2rem;
+}
+
+.menu-items {
+  text-align: center;
+  position: absolute;
+  padding: 30px;
+  top: 40px;
+  right: 0;
+  list-style: none;
+  opacity: 0;
+  border: 4px solid #dd5555;
+  background-color: #dd5555;
+  border-radius: 0.25em;
+  transform: translateX(-10%);
+  transition: transform 100ms ease-in-out, opacity 200ms;
+}
+
+.menu-items li{
+  color: white;
+  padding: 0.5rem;
+}
+
+.menu-items li a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu-items li a:hover{
+  color: rgb(174, 174, 174);
+}
+
+.check {
+  position: absolute;
+  top: -17px;
+  left: -25px;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  z-index: 3;
+}
+
+.check:hover {
+  cursor: pointer;
+}
+
+.check:checked~.menu-items {
+  display: block;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.ham-menu {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: -5px;
+  right: 10%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #dd5555;
+  border-radius: 0.25em;
+}
+
+.ham-menu .line {
+  background-color: white;
+  border-radius: 1em;
+  width: 2rem;
+  height: 0.25rem;
+}
+
+.ham-menu .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 100ms ease-in-out;
+}
+
+.ham-menu .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 100ms ease-in-out;
+}
+
+.check:checked~.ham-menu .line1 {
+  display: block;
+  transform: rotate(45deg);
+}
+
+.check:checked~.ham-menu .line2 {
+  opacity: 0;
+}
+
+.check:checked~.ham-menu .line3 {
+  display: block;
+  transform: rotate(-45deg);
+}
+/******* BURGERMENU *****/
+
 /******* NAVBAR *****/
-nav {
+header section:first-child{
   background-color: #dd5555;
   height: 52px;
   padding-left: 10%;
   display: flex;
   align-items: center;
+}
+.container {
+  display: none;
 }
 
 Nav ul {
@@ -113,7 +256,8 @@ header section > div h3::after {
   content: "";
   border-bottom: 1px solid #ffffff;
   height: 1px;
-  width: 390px;
+  width: 90%;
+  max-width: 390px;
   margin: 23px 0 24px 0;
 }
 
@@ -246,16 +390,16 @@ footer {
   padding: 51px 0 64px 0;
   background-color: #dd5555;
 }
+/***** title footer*****/
 footer h2 {
   font-family: "Open Sans semi-bold", sans-serif;
   font-size: 36px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 32px;
+  max-width: 90%;
 }
-footer label {
-  color: #ffffff;
-}
+/***** title inputs**/
 footer label {
   color: #ffffff;
   margin-bottom: 5px;
@@ -269,6 +413,7 @@ footer input {
 }
 
 footer textarea {
+  resize: none;
   border: none;
   outline: none;
   border-radius: 2px;
@@ -276,7 +421,7 @@ footer textarea {
   height: 112px;
   margin-bottom: 16px;
 }
-
+/***** button**/
 footer button {
   gap: 5px;
   height: 46px;
@@ -289,6 +434,7 @@ footer button {
   border: none;
   cursor: pointer;
 }
+
 footer button:hover{
   background-color: #fafafa;
 }
@@ -301,7 +447,8 @@ footer form {
 footer form > div {
   display: flex;
   flex-direction: column;
-  width: 748px;
+  width: 90%;
+  max-width: 748px;
 }
 footer form > div div{
   display: flex;
