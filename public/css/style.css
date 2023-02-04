@@ -13,6 +13,15 @@ body * {
   font-family: "Open Sans Regular", sans-serif;
   font-size: 16px;
 }
+button,
+a {
+  transform: scale(1);
+  transition: 0.3s;
+}
+button:hover,
+a:hover{
+  transform: scale(1.2);
+}
 /***** RESPONSIVE ****/
 @media screen and (max-width: 1190px) {
   main section:first-child div{
@@ -107,7 +116,6 @@ body * {
 .menu-items {
   text-align: center;
   position: absolute;
-  padding: 30px;
   top: 40px;
   right: 0;
   list-style: none;
@@ -119,18 +127,20 @@ body * {
   transition: transform 100ms ease-in-out, opacity 200ms;
 }
 
-.menu-items li{
-  color: white;
-  padding: 0.5rem;
+
+.menu-items li:hover{
+  background-color: #e96161;
 }
 
 .menu-items li a{
-  color: white;
+  z-index: 3;
+  padding: 30px;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .menu-items li a:hover{
-  color: rgb(174, 174, 174);
+  color: #ffffff;
 }
 
 .check {
