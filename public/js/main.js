@@ -1,7 +1,7 @@
 const link = document.querySelectorAll("a")
 
 link.forEach(el=>{
-    el.href=location.host;
+    el.href=`${location.host}${location.pathname}`
 })
 
 
